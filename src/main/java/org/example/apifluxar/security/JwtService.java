@@ -16,7 +16,7 @@ public class JwtService {
     public String generateToken(Authentication authentication) {
         String username = authentication.getName();
         Date now = new Date();
-        Date expiry = new Date(now.getTime() + 86400000);
+        Date expiry = new Date(now.getTime() + 604800000);
 
         return Jwts.builder()
                 .setSubject(username)
